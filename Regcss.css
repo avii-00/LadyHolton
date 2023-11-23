@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+table.one
+{
+	background-color: #000000;
+	
+}
+
+table.two
+{
+    font-size: 16px;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #050505;
+}
+ h1
+{
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+    color: #FFFFFF;
+    align-content: center;
+}
+
+ td
+{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif"9;
+    font-size: 16px;
+    text-indent: 5px;
+    color: #000000;
+}
+
+input[type=text]
+{
+	width: 95%;
+	padding: 7px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	box-sizing: border-box;
+	resize: vertical;
+		
+}
+
+textarea[name=txtAddress]
+{
+	width: 95%;
+	padding: 7px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+input[type=password]
+{
+	width: 95%;
+	padding: 7px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+ input[type=submit]
+{
+	background-color: #000000 ;
+	color: #FFFFFF;
+	padding: 13px 19px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover
+{
+	background-color: #111010;
+}
+
+
+body{
+	background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("images/abc.jpg");
+	background-size: cover;
+
+
+}
+
+.two {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}

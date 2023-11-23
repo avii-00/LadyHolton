@@ -1,0 +1,1142 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+	
+}
+
+h1 
+{
+	font-size: 50px;
+	line-height: 64px;
+	color: #000000;	
+	
+}
+
+h2
+{
+	font-size: 46px;
+	line-height: 54px;
+	color: #000000;
+	
+}
+
+h4
+{
+	font-size: 20px;
+	color: #000000;
+}
+
+p
+{
+	font-size: 16px;
+	color: #465B52;
+	margin: 15px 0 20px 0;
+}
+
+.section-p1
+{
+	padding: 40px 80px;         /* top to bottom, left to right */
+}
+
+.section-m1
+{
+	margin: 40px 0;    
+}
+
+button.normal                    /* some global styling */
+{
+	font-size: 14px;
+	font-weight: 600;
+	padding: 15px 30px;
+	color: #FFFFFF;
+	background-color: #000000;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	transition: 0.2s;
+	
+}
+
+button.white               
+{
+	font-size: 13px;
+	font-weight: 600;
+	padding: 11px 18px;
+	color: #000000;
+	background-color: transparent;
+	cursor: pointer;
+	border: 1px solid white;
+	outline: none;
+	transition: 0.2s;
+	
+}
+
+body
+{
+	width: 100%;
+}
+
+/*Header Start*/
+#header
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 80px;
+	background: #E3E6F3;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	z-index: 999;
+	position: sticky;               /* Make nav bar sticky on the top always  */
+	top: 0;
+	left: 0;
+}
+
+/* Navigation bar */
+
+#navbar
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#navbar li    /*remove bullets */
+{
+	list-style: none;
+	padding: 0 20px;
+	position: relative;  /*make visible the blue line */
+}
+
+#navbar li a   /*Remove underline */
+{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600px;
+	color: #1A1A1A;
+	transition: 0.3s ease;  /* add some smoothness for the change */
+}
+
+#navbar ul li a:hover,         /* add hover effect */
+#navbar ul li a.active
+{
+	color: #088178;
+}
+
+#navbar li a.active::after,  /*add the blue line under selected page  */
+#navbar li a:hover::after    /* add blue line when mouse pointer is on it */
+{
+	content: "";
+	width: 30%;
+	height: 2px;
+	background: #088178;
+	position: absolute;
+	bottom: -4px;
+	left: 20px;
+}  
+
+#navbar ul li
+{
+	background: #FFFFFF;
+	width: 170px;
+	border: 1px solid #ADA8A8;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	color: #000000;
+	font-size: 16px;
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+	
+}
+
+
+ /* Image Slider  */ 
+
+.container
+{
+	width: 100%;
+	height: auto;
+	background: rgba(92, 88, 88, 0.6);
+			
+}
+
+.slider-container
+{
+	max-width: 1500px;
+	height: auto;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img
+{
+	width: 100%;
+	vertical-align: auto;
+	
+}
+
+.slider-item-text
+{
+	max-width: 50%;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateY(-50%);
+	transform: translateX(-50%);
+	background-color: rgba(0, 0 , 0, 0.5);
+	color: #FFFFFF;
+	padding: 3rem 5rem;
+}
+
+.slider-item-text h5
+{
+	font-size: 35px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
+	
+}
+
+.slider-item-text p
+{
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-align: center;
+	letter-spacing: 3px;
+	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
+	
+}
+
+.slider-item-text button
+{
+	font-size: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background:  #3B3636;
+	border: #A2A2A2;
+	height: 34px;
+    margin: 0 auto;
+    margin-right: 175px;
+    float: right;
+	letter-spacing: 3px;
+	margin-top: 2.5rem;
+	
+}
+
+.slider-item-text button:hover
+{
+	color: #000000;
+}
+
+.prev-button,
+.next-button
+{
+	width: 40px;
+	height: 60px;
+	font-size: 30px;
+	font-weight: bold;
+	color: rgba(240, 240, 255, 0.7);
+	/* background: #000000; */ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+}
+
+.prev-button
+{
+	left: 0;
+}
+
+.next-button
+{
+	right: 0;
+}
+
+.prev-button:hover, 
+.next-button:hover
+{
+	color: #554747;
+	transition: color 0.3s ease;
+}
+
+.lines
+{
+	position: absolute;
+	display: flex;
+	bottom: 10px;
+	
+}
+
+.line
+{
+	padding: 1.5px 10px;
+	margin: 0 3px;
+	background-color: rgba(240, 240, 255, 0.7);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.active,
+.line:hover
+{
+	background-color: #FFFFFF;
+	
+}
+
+.slider
+{
+	display: none;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* For responsive  */
+@media (max-width: 700px)
+{
+	.prev-button, 
+    .next-button
+	{
+		font-size: 20px;
+	}
+	
+	.line
+	{
+		padding: 1px 8px;
+	}
+}
+	
+/* Featured Products */
+
+#product1 
+{
+	text-align: center;
+}
+
+#product1 .pro-container
+{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	flex-wrap: wrap;
+}
+
+#product1 .pro
+{
+	width: 20%;
+	min-width: 20%;
+	padding: 10px;
+	border: 1px solid #CCE7D0;
+	cursor: pointer;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+	margin: 15px 30px;
+	transition: 0.2s ease;
+	
+	
+}
+
+#product1 .pro:hover
+{
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img
+{
+	width: 100%;
+	border-radius: 20px;
+	margin-left: 1px;
+}
+
+#product1 .pro .des    /* product description */ 
+{
+	text-align: start;
+	padding: 10px 0;
+	
+}
+
+#product1 .pro .des h3
+{
+	padding-top: 7px;
+	color: #1A1A1A;
+	font-size: 14px;
+	text-align: center;
+}
+
+#product1 .pro .des p
+{
+	font-size: 15px;
+	font-weight: 500;
+	color: #322D2E;
+	text-align: right;
+	
+}
+
+
+/* Banner */
+
+#banner
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url("images/abc.jpg");
+	width: 100%;
+	height: 80vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#banner h4
+{
+	color: #534141;
+	font-size: 25px;
+}
+
+#banner h2
+{
+	color: #000000;
+	font-size: 45px;
+	padding: 10px 0;
+}
+#banner h2 span
+{
+	color: #E10E12;
+}
+
+#banner button:hover
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+/* Small banner  */
+
+#sm-banner
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#sm-banner  .banner-box
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url("images/S_Banner/jumpsuit.jpg");
+	min-width: 500px;
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+}
+
+#sm-banner  .banner-box2
+{
+	background-image: url("images/S_Banner/dresses.jpg");
+}
+
+#sm-banner h4
+{
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#sm-banner h2
+{
+	color: #000000;
+	font-size: 28px;
+	font-weight: 800;
+}
+
+#sm-banner span
+{
+	color: #000000;
+	font-style: oblique;
+	font-size: 14px;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button     /*To add hover effect when the cursor is on the image itself */
+{
+	background-color: #FFFFFF;
+	border: 1px solid #221B1B;
+}
+
+/* Newsletter */
+
+#newsletter
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	background-image: url("images/Newsletter/image1.jpg");
+	background-repeat: no-repeat;
+	background-position: 20% 30%;
+	background-color: #4A4949;
+}
+
+#newsletter h4
+{
+	font-size: 25px;
+	font-weight: 700;
+	color: #000000;
+}
+
+#newsletter p
+{
+	font-size: 18px;
+	font-weight: 600;
+	color: #2A2020;
+}
+
+#newsletter p span
+{
+	color: #F1B82A;
+}
+
+#newsletter .form
+{
+	display: flex;
+	width: 40%;
+}
+
+#newsletter input      /* Email address typing box */
+{
+	height: 3.125rem;
+	padding: 0 1.25rem;
+	font-size: 14px;
+	width: 100%;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	outline: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#newsletter button
+{
+	background-color: #3F3334;
+	color: #FFFFFF;
+	white-space: nowrap;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* Footer */
+
+#footer
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 80px;
+	background: #E3E6F3;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	z-index: 999;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+#footer .col
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+footer h4
+{
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+footer p
+{
+	font-size: 16px;
+	margin: 0 0 8px 0;
+	
+}
+
+footer a
+{
+	font-size: 13px;
+	text-decoration: none;  /* To remove underline  */
+	color: #9B9596;
+	margin-bottom: 10px;
+}
+
+footer .follow
+{
+	margin-top: 20px;
+	
+}
+
+footer .follow i
+{
+	color: #807070;
+	font-size: 20px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover
+{
+	color: #000000;
+}
+
+footer  .copyright                         
+{
+	width: 100%;
+	text-align: center;
+	
+	
+}
+
+
+/*Shop Page */
+ 
+#page-header  
+{
+	background-image: url("images/slider7.jpeg");
+	width: 100%;
+	height: 70vh;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;      /*Bring content to middle of image  */
+	padding: 14px;
+
+}
+
+#page-header h2
+{
+	color: #886565;
+}
+
+#page-header p
+{
+	color: #2D1D1D;
+	font-size: 20px;
+}
+
+#pagination
+{
+	text-align: center;
+}
+
+#pagination a
+{
+	text-decoration: none;
+	background-color: #000000;
+	padding: 15px 20px;
+	border-radius: 4px;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+
+#pagination .icon
+{
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* Single Product */
+
+#prodetails
+{
+	display: flex;       /* image and details in one row  */
+	margin-top: 20px;   /* Add space from top  */
+}
+
+ #prodetails   .single-pro-image   /* Adjust all images  */
+{
+	width: 40%;
+	margin-right: 50px;
+}
+
+.small-img-group     /* Adjust the small images */
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.small-img-col
+{
+	flex-basis: 24%;
+	cursor: pointer;
+}
+
+#prodetails   .single-pro-details
+{
+	width: 50%;
+	padding-top: 30px;
+}
+
+#prodetails   .single-pro-details h6
+{
+	font-size: 16px;
+}
+#prodetails   .single-pro-details h4
+{
+	padding: 40px 0 20px 0;
+}
+
+#prodetails   .single-pro-details h2
+{
+	font-size: 26px;
+	
+}
+
+#prodetails   .single-pro-details p
+{
+	font-size: 16px;
+}
+
+.size
+{
+	display: flex;
+}
+
+.single-pro-details  .psize
+{
+	
+	width: 60px;
+	height: 30px;
+	border: 1px solid #000000;
+	color: #161616;
+	text-align: center;
+	justify-content: center;
+	margin: 20px 20px;
+}
+
+.single-pro-details  .psize.active
+{
+	border-width: 1.5px;
+	color: #362324;
+	font-weight: 800;
+	
+}
+
+#prodetails   .single-pro-details input
+{
+	width: 40px;
+	height: 40px;
+	padding-left: 10px;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+#prodetails   .single-pro-details input:focus    /* remove outline around the box  */
+{
+	outline: none;
+}
+
+
+#prodetails   .single-pro-details  button
+{
+	background-color: #463E3E;
+	color: #FFFFFF;
+}
+
+#prodetails   .single-pro-details span
+{
+	line-height: 25px;
+}
+
+/* About Us */
+
+#heading h2
+{
+	text-align: center;
+	justify-content: center;
+	color: #744D4E;
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#heading p
+{
+	text-align: center;
+	justify-content: center;
+	color: #513C3D;
+	font-size: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+about-head h3
+{
+	font-size: 28px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #5C2B2C;
+}
+
+#about-head
+{
+	display: flex;
+	align-items: center;
+}
+
+#about-head img
+{
+	width: 50%;
+	height: 50%;
+}
+
+#about-head div
+{
+	padding: 40px;
+}
+
+ /* Size Guide */
+
+#sub-heading  h2
+{
+	font-size: 28px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #744D4E;
+	text-align: center;
+}
+#sub-heading  h3
+{
+	font-size: 20px;
+	margin-left: 40px;
+	
+}
+
+#sub-heading  p
+{
+	font-size: 20px;
+	margin-left: 40px;
+}
+
+#table{
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	padding: 0px 300px
+}
+
+/* Return Policy */
+
+#ret-heading h2
+{
+	text-align: center;
+	justify-content: center;
+	color: #744D4E;
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#ret-heading p.one
+{
+	text-align: justify;
+	justify-content: center;
+	font-size: 20px;
+	padding: 40px;
+	padding-right: 40px;
+}
+
+#ret-heading  h3
+{
+	text-align: justify;
+	justify-content: center;
+	color: #0000;
+	font-size: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-left: 40px;
+}
+
+#ret-heading p.two
+{
+	text-align: justify;
+	justify-content: center;
+	font-size: 18px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+ /* FAQ's */
+
+#faq-heading h2
+{
+	text-align: center;
+	justify-content: center;
+	color: #744D4E;
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#faq-heading p
+{
+	text-align: justify;
+	justify-content: center;
+	font-size: 18px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+ /* TERMS AND CONDITIONS */ 
+
+#term-heading h2
+{
+	text-align: center;
+	justify-content: center;
+	color: #744D4E;
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#term-heading p
+{
+	text-align: justify;
+	justify-content: center;
+	font-size: 18px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/* CONTACT US */
+
+#contact-details
+{
+	display: flex;   /* Align components in one row */ 
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+#contact-details .details
+{
+	width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span
+{
+	font-size: 16px;
+}
+
+#contact-details .details h2,
+#form-details form h2
+{
+	font-size: 26px;
+	line-height: 35px;
+	padding: 20px 0;
+	
+}
+
+#contact-details .details h3
+{
+	font-size: 16px;
+	padding-bottom: 15px;
+	
+}
+
+#contact-details .details li
+{
+	list-style: none; /* remove bullet points in icon and details */
+	display: flex; /* Align in one row */
+	padding: 10px 0;
+	
+	
+}
+
+#contact-details .details li i
+{
+	font-size: 14px;
+	padding-right: 22px;
+}
+
+#contact-details .details li p
+{
+	margin: 0;
+	font-size: 14px;
+}
+
+#contact-details .map
+{
+	width: 55%;
+	height: 400%;
+}
+
+#contact-details .map iframe
+{
+	width: 100%;
+	
+}
+
+#form-details
+{
+	display: flex;
+	justify-content: space-between;
+	margin: 30px;
+	padding: 80px;
+	border: 1px solid #e1e1e1;
+}
+
+#form-details form
+{
+	width: 65%;
+	display: flex; /*align to one column */
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea
+{
+	width: 100%;
+	padding: 12px 15px;
+	outline: none;
+	margin-bottom: 20px;
+	border: 1px solid  #e1e1e1;
+	
+}
+
+#form-details form button
+{
+	background-color: #088178;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products .title{
+	align-content: center;
+	font-size: 40px;
+	color: black;
+	padding: 30px 0 0 0;
+}
+
+.box-container{
+   max-width: 1920px;
+   margin:0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 25rem);
+   align-items: flex-start;
+   gap:3rem;
+   justify-content: center;
+	padding: 3rem 0rem;
+}
+
+.products .box-container .box{
+   background-color: #FFF;
+   box-shadow: var(--box-shadow);
+   padding:2rem;
+   text-align: center;
+   border:var(--border);
+   position: relative;
+	height: 35rem;
+	border:.1rem solid rgba(0, 0, 0, 0.2)
+	
+}
+
+
+
+.products .box-container .box .image{
+   height: 22rem;
+	width: 18rem;
+	align-items: center;
+}
+
+.products .box-container .box .name{
+   padding:1rem 0  ;
+   font-size: 1rem;
+}
+
+.products .box-container .box .qty{
+   width: 70%;
+   padding:1.2rem 1.4rem;
+   border:var(--border);
+   margin:0.5rem 0;
+   font-size: 1rem;
+}
+
+.products .box-container .box .pricedisc{
+   display: flex;
+	column-gap: 10rem;
+}
+
+.products .box-container .box .addtocart .btn{
+	margin-top: 1rem;
+   padding:0.5rem 1rem;
+   cursor: pointer;
+   color: black;
+   font-size: 1rem;
+   text-transform: capitalize;
+	background: cornflowerblue;
+}
+
+.search-form form{
+   max-width: 1200px;
+   margin:0 auto;
+   display: flex;
+   gap:1rem;
+}
+
+.search-form form .btn{
+   margin-top: 0;
+}
+
+.search-form form .box{
+   width: 100%;
+   padding:1.2rem 1.4rem;
+   border:var(--border);
+   font-size: 2rem;
+   color:var(--black);
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+}
+

@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0; padding:0;
+	box-sizing: border-box;
+	outline:none;
+	border:none;
+}
+
+
+body{
+	background: #242F9B;
+}
+
+
+.title{
+   text-align: center;
+   margin-bottom: 30px;
+   text-transform: uppercase;
+   color: white;
+   font-size: 55px;
+}
+
+ section{
+   padding:2rem 2rem;
+}
+.add-products form{
+   background-color: #9BA3EB;
+   
+   padding: 40px;
+   text-align: center;
+   max-width: 800px;
+   margin:0 auto;
+}
+
+.add-products form h3{
+   font-size: 40px;
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 20px;
+}
+
+.add-products form .box{
+   width: 100%;
+   background-color: #DBDFFD;
+   margin:10px;
+   padding:20px 40px;
+   color: black;
+   font-size: 20px;
+}
+
+.delete-btn{
+   background-color: red;
+}
+
+.message{
+   position: sticky;
+   max-width: 1200px;
+   background-color: white;
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+}
+
+.btn,
+.option-btn,
+.delete-btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:2rem 2rem;
+   color: white;
+   font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: black;
+}
+
+.btn{
+   background-color: #242F9B ;
+}
